@@ -52,6 +52,9 @@ public class Main {
             } else if (((Roman) numbers).getRomanNumber1ToInt() < 1 || ((Roman) numbers).getRomanNumber1ToInt() > 10) {
                 throw new Exception();
             }
+             if ((((Roman) numbers).getRomanNumber1ToInt() - ((Roman) numbers).getRomanNumber2ToInt()) < 0 || ((((Roman) numbers).getRomanNumber1ToInt() / ((Roman) numbers).getRomanNumber2ToInt()) < 0)) {
+                    throw new Exception("//т.к. в римской системе нет отрицательных чисел | невозможен вывод нуля ");
+                 }
         }
 
         if (operation.equals("+")) {
